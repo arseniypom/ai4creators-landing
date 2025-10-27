@@ -3,16 +3,17 @@ import { SiteHeader } from "@/components/site-header"
 import { ValuePropSection } from "@/components/sections/value-prop"
 import { WaitlistSection } from "@/components/sections/waitlist"
 import { WhatWeDo } from "@/components/sections/what-we-do"
-import type { Locale } from "@/i18n-config"
+import { resolveLocale } from "@/i18n-config"
 import { getDictionary } from "@/lib/get-dictionary"
 
 export default async function Home({
   params,
 }: {
-  params: Promise<{ locale: Locale }>
+  params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  const dictionary = await getDictionary(locale)
+  const resolvedLocale = resolveLocale(locale)
+  const dictionary = await getDictionary(resolvedLocale)
   const { header, hero, whatWeDo, valueProp, waitlist } = dictionary
 
   return (
@@ -21,7 +22,7 @@ export default async function Home({
         <SiteHeader
           brand={header.brand}
           ctaLabel={header.cta}
-          locale={locale}
+          locale={resolvedLocale}
           localeSwitcher={header.localeSwitcher}
         />
 

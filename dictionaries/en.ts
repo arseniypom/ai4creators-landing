@@ -1,3 +1,5 @@
+import type { Dictionary } from "./types"
+
 const dictionary = {
   metadata: {
     title: "InstaGrow — Smart Instagram Growth Companion",
@@ -61,6 +63,6 @@ const dictionary = {
     emailPlaceholder: "Enter your email",
     cta: "Join waitlist",
   },
-} as const
+} satisfies Dictionary
 
 export default dictionary

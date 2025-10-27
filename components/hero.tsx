@@ -9,7 +9,7 @@ type HeroProps = {
   title: string;
   description: string;
   ctaLabel: string;
-  rotatingWords: string[];
+  rotatingWords: readonly string[];
   instagramImageSrc: string;
   imageAlt: string;
 };

@@ -11,7 +11,7 @@ type LocaleSwitcherProps = {
   label: string
   shortNames: Record<Locale, string>
   localeNames: Record<Locale, string>
-  availableLocales: Locale[]
+  availableLocales: readonly Locale[]
 }
 
 export function LocaleSwitcher({

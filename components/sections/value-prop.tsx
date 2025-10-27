@@ -1,7 +1,7 @@
 type ValuePropSectionProps = {
   title: string
   description: string
-  checklistItems: string[]
+  checklistItems: readonly string[]
 }
 
 export function ValuePropSection({

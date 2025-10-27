@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { MouseEvent } from "react"
+import { MouseEvent, Suspense } from "react"
 
 import { i18n, type Locale } from "@/i18n-config"
 
@@ -44,13 +44,15 @@ export function SiteHeader({
     <header className="flex flex-col gap-4 border-b border-zinc-200 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-12">
       <span className="text-lg font-semibold sm:text-xl">{brand}</span>
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-        <LocaleSwitcher
-          currentLocale={locale}
-          label={localeSwitcher.label}
-          shortNames={localeSwitcher.shortNames}
-          localeNames={localeSwitcher.localeNames}
-          availableLocales={i18n.locales}
-        />
+        <Suspense fallback={null}>
+          <LocaleSwitcher
+            currentLocale={locale}
+            label={localeSwitcher.label}
+            shortNames={localeSwitcher.shortNames}
+            localeNames={localeSwitcher.localeNames}
+            availableLocales={i18n.locales}
+          />
+        </Suspense>
         <Link
           href={ctaHref}
           onClick={handleCtaClick}

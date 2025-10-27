@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 
-import { i18n, type Locale } from "@/i18n-config"
+import { i18n, resolveLocale } from "@/i18n-config"
 import { getDictionary } from "@/lib/get-dictionary"
 
 import "../globals.css"
@@ -23,10 +23,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale }>
+  params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
-  const dictionary = await getDictionary(locale)
+  const resolvedLocale = resolveLocale(locale)
+  const dictionary = await getDictionary(resolvedLocale)
   const metadata = dictionary.metadata
 
   return {
@@ -67,12 +68,13 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ locale: Locale }>
+  params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+  const resolvedLocale = resolveLocale(locale)
 
   return (
-    <html lang={locale}>
+    <html lang={resolvedLocale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>

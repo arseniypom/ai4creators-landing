@@ -8,7 +8,7 @@ type StepContent = {
 
 type WhatWeDoProps = {
   title: string
-  steps: StepContent[]
+  steps: readonly StepContent[]
   schemaImageSrc: string
 }
 

@@ -1,6 +1,8 @@
-import { i18n } from "@/i18n-config"
+import { i18n, isLocale, type Locale } from "@/i18n-config"
 
-export function getPreferredLocale(acceptLanguage: string | null | undefined) {
+export function getPreferredLocale(
+  acceptLanguage: string | null | undefined,
+): Locale {
   if (!acceptLanguage) {
     return i18n.defaultLocale
   }
@@ -13,13 +15,13 @@ export function getPreferredLocale(acceptLanguage: string | null | undefined) {
   for (const locale of preferredLocales) {
     const normalizedLocale = locale.toLowerCase()
 
-    if (i18n.locales.includes(normalizedLocale as (typeof i18n.locales)[number])) {
-      return normalizedLocale as (typeof i18n.locales)[number]
+    if (isLocale(normalizedLocale)) {
+      return normalizedLocale
     }
 
     const baseLocale = normalizedLocale.split("-")[0]
-    if (i18n.locales.includes(baseLocale as (typeof i18n.locales)[number])) {
-      return baseLocale as (typeof i18n.locales)[number]
+    if (isLocale(baseLocale)) {
+      return baseLocale
     }
   }
 

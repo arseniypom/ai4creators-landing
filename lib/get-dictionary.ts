@@ -1,13 +1,12 @@
-import type { Locale } from "@/i18n-config"
+import { resolveLocale, type Locale } from "@/i18n-config"
+import type { Dictionary } from "@/dictionaries/types"
 
-const dictionaries: Record<
-  Locale,
-  () => Promise<typeof import("@/dictionaries/en").default>
-> = {
-  en: () => import("@/dictionaries/en").then((module) => module.default),
-  ru: () => import("@/dictionaries/ru").then((module) => module.default),
+const dictionaryLoaders: Record<Locale, () => Promise<Dictionary>> = {
+  en: async () => (await import("@/dictionaries/en")).default,
+  ru: async () => (await import("@/dictionaries/ru")).default,
 }
 
-export async function getDictionary(locale: Locale) {
-  return dictionaries[locale]()
+export async function getDictionary(locale: string | undefined) {
+  const resolvedLocale = resolveLocale(locale)
+  return dictionaryLoaders[resolvedLocale]()
 }

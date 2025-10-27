@@ -6,7 +6,7 @@ import { AnimatePresence, motion, MotionProps } from "motion/react"
 import { cn } from "@/lib/utils"
 
 interface WordRotateProps {
-  words: string[]
+  words: readonly string[]
   duration?: number
   motionProps?: MotionProps
   className?: string
