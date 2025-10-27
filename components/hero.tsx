@@ -6,11 +6,22 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 import { WordRotate } from "@/components/ui/word-rotate";
 
 type HeroProps = {
+  title: string;
+  description: string;
+  ctaLabel: string;
   rotatingWords: string[];
   instagramImageSrc: string;
+  imageAlt: string;
 };
 
-export function Hero({ rotatingWords, instagramImageSrc }: HeroProps) {
+export function Hero({
+  title,
+  description,
+  ctaLabel,
+  rotatingWords,
+  instagramImageSrc,
+  imageAlt,
+}: HeroProps) {
   const handleJoinWaitlistClick = () => {
     const target = document.querySelector("#waitlist");
     if (target instanceof HTMLElement) {
@@ -23,18 +34,17 @@ export function Hero({ rotatingWords, instagramImageSrc }: HeroProps) {
     <section className="grid gap-12 px-6 py-12 sm:px-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
       <div className="flex flex-col gap-6">
         <h1 className="text-4xl font-semibold leading-snug sm:text-5xl">
-          Grow any Instagram account, the smart way
+          {title}
         </h1>
         <p className="max-w-xl text-lg text-zinc-600">
-          Get a growth strategy tailored to your audience and generate
-          high-performing Reels with one click.
+          {description}
         </p>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
           <InteractiveHoverButton
             type="button"
             onClick={handleJoinWaitlistClick}
           >
-            Join the waitlist
+            {ctaLabel}
           </InteractiveHoverButton>
         </div>
       </div>
@@ -43,7 +53,7 @@ export function Hero({ rotatingWords, instagramImageSrc }: HeroProps) {
         <div className="rounded-[2.1rem] bg-white p-6">
           <Image
             src={instagramImageSrc}
-            alt="Instagram growth preview"
+            alt={imageAlt}
             width={520}
             height={520}
             className="h-auto w-[min(280px,50vw)] sm:w-[320px] md:w-[360px] lg:w-[320px] xl:w-[360px]"

@@ -1,15 +1,19 @@
 type ValuePropSectionProps = {
+  title: string
+  description: string
   checklistItems: string[]
 }
 
-export function ValuePropSection({ checklistItems }: ValuePropSectionProps) {
+export function ValuePropSection({
+  title,
+  description,
+  checklistItems,
+}: ValuePropSectionProps) {
   return (
     <section className="flex flex-col gap-8 border-t border-zinc-200 px-6 py-12 sm:px-12">
       <div className="flex flex-col gap-4">
-        <h2 className="text-2xl font-semibold sm:text-3xl">Why can&apos;t I just do this with ChatGPT?</h2>
-        <p className="max-w-2xl text-base text-zinc-600">
-          You can try — but only our system gives you the ingredients creators use to grow consistently without guesswork.
-        </p>
+        <h2 className="text-2xl font-semibold sm:text-3xl">{title}</h2>
+        <p className="max-w-2xl text-base text-zinc-600">{description}</p>
       </div>
       <ul className="flex flex-col gap-4 text-base text-zinc-700">
         {checklistItems.map((item) => (
