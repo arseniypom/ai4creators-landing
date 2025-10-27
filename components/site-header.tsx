@@ -41,9 +41,9 @@ export function SiteHeader({
   }
 
   return (
-    <header className="flex flex-col gap-4 border-b border-zinc-200 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-12">
+    <header className="flex gap-4 border-b border-zinc-200 px-6 py-6 flex-row items-center justify-between sm:px-12">
       <span className="text-lg font-semibold sm:text-xl">{brand}</span>
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+      <div className="flex gap-3 flex-row items-center sm:gap-4">
         <Suspense fallback={null}>
           <LocaleSwitcher
             currentLocale={locale}
@@ -56,7 +56,7 @@ export function SiteHeader({
         <Link
           href={ctaHref}
           onClick={handleCtaClick}
-          className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200 px-5 py-2 text-sm font-medium text-zinc-900 transition hover:border-zinc-900 hover:text-zinc-900"
+          className="hidden sm:inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200 px-5 py-2 text-sm font-medium text-zinc-900 transition hover:border-zinc-900 hover:text-zinc-900"
         >
           {ctaLabel}
         </Link>
