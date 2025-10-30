@@ -16,7 +16,7 @@ export function WaitlistSection({
   return (
     <section
       id="waitlist"
-      className="flex flex-col gap-8 border-t border-zinc-200 px-6 py-12 sm:px-12"
+      className="flex flex-col gap-8 px-6 py-12 sm:px-12"
     >
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl font-semibold sm:text-3xl">

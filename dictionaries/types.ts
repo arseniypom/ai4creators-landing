@@ -15,11 +15,21 @@ export type Dictionary = {
     }
   }
   hero: {
-    title: string
+    eyebrow: string
+    titlePrimary: string
+    titleHighlight: string
     description: string
     cta: string
-    rotatingWords: readonly string[]
-    imageAlt: string
+  }
+  howItWorks: {
+    title: string
+    description: string
+    steps: readonly {
+      title: string
+      description: string
+      highlights: readonly string[]
+      icon: "sparkles" | "rocket"
+    }[]
   }
   whatWeDo: {
     title: string
@@ -32,7 +42,23 @@ export type Dictionary = {
   valueProp: {
     title: string
     description: string
-    checklist: readonly string[]
+    columns: {
+      instagrow: string
+      chatgpt: string
+    }
+    features: readonly {
+      label: string
+      instagrow: boolean
+      chatgpt: boolean
+    }[]
+  }
+  faq: {
+    title: string
+    description: string
+    items: readonly {
+      question: string
+      answer: string
+    }[]
   }
   waitlist: {
     title: string

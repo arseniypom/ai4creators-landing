@@ -2,7 +2,8 @@ import { Hero } from "@/components/hero"
 import { SiteHeader } from "@/components/site-header"
 import { ValuePropSection } from "@/components/sections/value-prop"
 import { WaitlistSection } from "@/components/sections/waitlist"
-import { WhatWeDo } from "@/components/sections/what-we-do"
+import { HowItWorks } from "@/components/sections/how-it-works"
+import { FaqSection } from "@/components/sections/faq"
 import { resolveLocale } from "@/i18n-config"
 import { getDictionary } from "@/lib/get-dictionary"
 
@@ -14,7 +15,7 @@ export default async function Home({
   const { locale } = await params
   const resolvedLocale = resolveLocale(locale)
   const dictionary = await getDictionary(resolvedLocale)
-  const { header, hero, whatWeDo, valueProp, waitlist } = dictionary
+  const { header, hero, howItWorks, valueProp, waitlist, faq } = dictionary
 
   return (
     <div className="min-h-screen bg-zinc-50 py-10 text-zinc-900">
@@ -27,24 +28,33 @@ export default async function Home({
         />
 
         <Hero
-          title={hero.title}
+          eyebrow={hero.eyebrow}
+          titlePrimary={hero.titlePrimary}
+          titleHighlight={hero.titleHighlight}
           description={hero.description}
           ctaLabel={hero.cta}
-          rotatingWords={hero.rotatingWords}
-          instagramImageSrc="/images/instagram.webp"
-          imageAlt={hero.imageAlt}
         />
 
+        <HowItWorks
+          title={howItWorks.title}
+          description={howItWorks.description}
+          steps={howItWorks.steps}
+        />
+
+        {/* TODO: Re-enable WhatWeDo section when refreshed content/design is ready */}
+        {/*
         <WhatWeDo
           title={whatWeDo.title}
           steps={whatWeDo.steps}
           schemaImageSrc="/images/strategy-schema.png"
         />
+        */}
 
         <ValuePropSection
           title={valueProp.title}
           description={valueProp.description}
-          checklistItems={valueProp.checklist}
+          columns={valueProp.columns}
+          features={valueProp.features}
         />
 
         <WaitlistSection
@@ -52,6 +62,12 @@ export default async function Home({
           description={waitlist.description}
           emailPlaceholder={waitlist.emailPlaceholder}
           ctaLabel={waitlist.cta}
+        />
+
+        <FaqSection
+          title={faq.title}
+          description={faq.description}
+          items={faq.items}
         />
       </main>
     </div>

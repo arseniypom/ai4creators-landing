@@ -1,26 +1,19 @@
 "use client";
 
-import Image from "next/image";
-
-import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
-import { WordRotate } from "@/components/ui/word-rotate";
-
 type HeroProps = {
-  title: string;
+  eyebrow: string;
+  titlePrimary: string;
+  titleHighlight: string;
   description: string;
   ctaLabel: string;
-  rotatingWords: readonly string[];
-  instagramImageSrc: string;
-  imageAlt: string;
 };
 
 export function Hero({
-  title,
+  eyebrow,
+  titlePrimary,
+  titleHighlight,
   description,
   ctaLabel,
-  rotatingWords,
-  instagramImageSrc,
-  imageAlt,
 }: HeroProps) {
   const handleJoinWaitlistClick = () => {
     const target = document.querySelector("#waitlist");
@@ -31,45 +24,27 @@ export function Hero({
   };
 
   return (
-    <section className="grid gap-12 px-6 py-12 sm:px-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
-      <div className="flex flex-col gap-6">
-        <h1 className="text-4xl font-semibold leading-snug sm:text-5xl">
-          {title}
-        </h1>
-        <p className="max-w-xl text-lg text-zinc-600">
-          {description}
-        </p>
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-          <InteractiveHoverButton
-            type="button"
-            onClick={handleJoinWaitlistClick}
-          >
-            {ctaLabel}
-          </InteractiveHoverButton>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center gap-1">
-        <div className="rounded-[2.1rem] bg-white p-6">
-          <Image
-            src={instagramImageSrc}
-            alt={imageAlt}
-            width={520}
-            height={520}
-            className="h-auto w-[min(280px,50vw)] sm:w-[320px] md:w-[360px] lg:w-[320px] xl:w-[360px]"
-            priority
-          />
-        </div>
-
-        <div className="flex gap-2 ml-[20%] font-medium self-baseline text-zinc-800">
-          <span className="flex items-center justify-center text-4xl text-zinc-900">+</span>
-          <WordRotate
-            words={rotatingWords}
-            className="text-4xl font-medium text-zinc-700"
-            duration={2200}
-          />
-        </div>
-      </div>
+    <section className="relative flex flex-col items-center gap-6 overflow-hidden px-6 py-20 text-center sm:px-12 sm:py-24 md:gap-8 md:py-28">
+      <div className="pointer-events-none absolute inset-0 -z-10 rounded-[2.5rem] bg-gradient-to-b from-[#f4f1ff] via-white to-white" />
+      <span className="text-xs font-semibold uppercase tracking-[0.4em] text-zinc-500">
+        {eyebrow}
+      </span>
+      <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-zinc-900 sm:text-5xl md:text-6xl">
+        {titlePrimary}{" "}
+        <span className="bg-gradient-to-r from-[#a855f7] via-[#ec4899] to-[#f97316] bg-clip-text text-transparent">
+          {titleHighlight}
+        </span>
+      </h1>
+      <p className="max-w-2xl text-lg text-zinc-600 sm:text-xl">
+        {description}
+      </p>
+      <button
+        type="button"
+        onClick={handleJoinWaitlistClick}
+        className="mt-2 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#a855f7] via-[#ec4899] to-[#f97316] px-8 py-3 text-base font-semibold text-white shadow-[0_20px_45px_-20px_rgba(168,85,247,0.8)] transition-transform duration-200 hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ec4899]"
+      >
+        {ctaLabel}
+      </button>
     </section>
   );
 }

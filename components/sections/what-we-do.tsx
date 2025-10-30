@@ -16,7 +16,7 @@ export function WhatWeDo({ title, steps, schemaImageSrc }: WhatWeDoProps) {
   const [firstStep, secondStep] = steps
 
   return (
-    <section className="flex flex-col gap-10 border-t border-zinc-200 px-6 py-12 sm:px-12">
+    <section className="flex flex-col gap-10 px-6 py-12 sm:px-12">
       <div className="max-w-2xl">
         <h2 className="text-2xl font-semibold sm:text-3xl">{title}</h2>
       </div>
