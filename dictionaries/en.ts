@@ -31,27 +31,32 @@ const dictionary = {
   },
   howItWorks: {
     title: "How It Works",
-    description: "Launch your creator business in just two simple steps",
+    description:
+      "Get a deep marketing research, a personalized 1-month content plan, and generate viral Reels scripts with 1 click",
     steps: [
       {
-        title: "Create Your Shop",
+        title: "Strategy: research and 1-month plan",
         description:
-          "Set up your personalized creator shop in minutes. Choose your branding, add your products or services, and customize everything to match your unique style. No coding or technical skills required.",
+          "Fill a short form. AI analyzes your niche and goals and delivers a detailed report with deep marketing research and a personalized 1-month content plan.",
         highlights: [
-          "Custom branding and design",
-          "Easy product management",
-          "Built-in payment processing",
+          "Short form: blog size, niche, goals, constraints",
+          "Deep marketing research tailored to your niche",
+          "Personalized 1-month content plan",
+          "Profile design (bio, highlights)",
+          "Audience analysis: habits, interests, pains, personas",
+          "Plan tailored to your goals: follower growth, engagement, clients",
         ],
         icon: "sparkles",
       },
       {
-        title: "Launch & Grow",
+        title: "Generate viral Reels scripts and posts",
         description:
-          "Share your shop with your audience and start earning. Access powerful analytics, marketing tools, and community features to help you grow your creator business and connect with your fans.",
+          "All insights from the strategy step are already in the system, so AI deeply understands your project. Generate from the plan or type your Reels idea, click ‘Generate’, and get a ready-to-use script with the right hook, engaging body, and a clear CTA.",
         highlights: [
-          "Real-time analytics dashboard",
-          "Marketing automation tools",
-          "Community engagement features",
+          "Uses your full strategy context — AI knows your project",
+          "One‑click generation from the plan or your idea",
+          "Scripts include a strong hook, engaging body, and CTA",
+          "Precise edits: tweak yourself or ask AI (e.g., change the hook, add details)",
         ],
         icon: "rocket",
       },
@@ -84,29 +89,29 @@ const dictionary = {
     },
     features: [
       {
-        label: "A thoughtful intake to unpack your project and capture every detail",
+        label: "Short form: niche, audience, offers, constraints",
         instagrow: true,
         chatgpt: false,
       },
       {
         label:
-          "Marketing analysis distilled from today's top experts (like taking 100 courses on marketing, audiences, and content in one go)",
+          "Expert market analysis tailored to your niche and competitors",
         instagrow: true,
         chatgpt: false,
       },
       {
-        label: "Reels scripts generated from proven viral formats tailored to your niche",
+        label: "Reels scripts from proven viral formats, tailored to your niche",
         instagrow: true,
         chatgpt: false,
       },
       {
-        label: "Deep understanding of your brand context and goals",
+        label: "Understands your brand context and goals to stay on‑message",
         instagrow: true,
         chatgpt: false,
       },
       {
         label:
-          "Natural tone of voice, clear structure, attention hooks, and action-driving CTAs",
+          "Natural tone, clear structure, strong hooks and action‑driving CTAs",
         instagrow: true,
         chatgpt: false,
       },
@@ -132,26 +137,16 @@ const dictionary = {
           "You can generate viral-ready Reels scripts, captions, and content plans tailored to your audience. We continuously expand formats to cover the trends that matter.",
       },
       {
-        question: "How do payments and monetization work?",
-        answer:
-          "You'll be able to connect your preferred payment provider when monetization tools roll out. Until then, you can focus on audience growth and content quality.",
-      },
-      {
         question: "Can I customize the strategy to fit my brand voice?",
         answer:
           "Yes. InstaGrow learns from your inputs and adapts tone, messaging, and creative angles so the strategy feels true to your brand.",
-      },
-      {
-        question: "What kind of support do you offer?",
-        answer:
-          "Early users will receive priority onboarding help, best-practice playbooks, and direct support from our team as we refine the product together.",
       },
     ],
   },
   waitlist: {
     title: "Be the first to try and finally get results",
     description:
-      "Join our waitlist and get notified when the app is launched. No spam, no newsletter.",
+      "Join our waitlist and get notified when the app is launched.\nNo spam, no newsletter.",
     emailPlaceholder: "Enter your email",
     cta: "Join waitlist",
   },

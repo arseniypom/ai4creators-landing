@@ -13,7 +13,7 @@ export function WaitlistSection({ title, description }: WaitlistSectionProps) {
       <div className="max-w-lg mx-auto text-center">
         <div className="flex flex-col gap-4 mb-4">
           <h2 className="text-2xl font-semibold sm:text-3xl">{title}</h2>
-          <p className="max-w-2xl text-base text-zinc-600">{description}</p>
+          <p className="max-w-2xl whitespace-pre-line text-base text-zinc-600">{description}</p>
         </div>
         <Script
           id="waitlist-css-loader"

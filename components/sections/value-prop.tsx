@@ -27,27 +27,26 @@ export function ValuePropSection({
         <p className="max-w-3xl text-base text-zinc-600 sm:text-lg">{description}</p>
       </div>
 
-      <div className="mt-4 overflow-hidden rounded-[2.5rem] border border-zinc-200 bg-white">
-        <div className="hidden grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)] border-b border-zinc-200 bg-[#f1f3ff] md:grid">
+      <div className="mt-4 overflow-hidden">
+        <div className="hidden grid-cols-[minmax(0,2fr)_minmax(0,0.5fr)_minmax(0,0.5fr)] border-b border-zinc-200 md:grid">
           <div />
-          <div className="flex items-center justify-center px-8 py-5 text-sm font-semibold uppercase tracking-wide text-zinc-600">
+          <div className="flex items-center justify-center bg-[#f4f5ff] px-8 py-5 text-sm font-semibold uppercase tracking-wide text-zinc-600 md:border-l md:border-zinc-200/60">
             {columns.instagrow}
           </div>
-          <div className="flex items-center justify-center px-8 py-5 text-sm font-semibold uppercase tracking-wide text-zinc-600 md:rounded-tr-[2.5rem]">
+          <div className="flex items-center justify-center bg-[#f4f5ff] px-8 py-5 text-sm font-semibold uppercase tracking-wide text-zinc-600 md:border-l md:border-zinc-200/60">
             {columns.chatgpt}
           </div>
         </div>
 
         <div>
           {features.map((feature, index) => {
-            const isFirst = index === 0
             const isLast = index === features.length - 1
 
             return (
               <div
                 key={feature.label}
                 className={cn(
-                  "grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)]",
+                  "grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(0,0.5fr)_minmax(0,0.5fr)]",
                   !isLast && "border-b border-zinc-200"
                 )}
               >
@@ -78,9 +77,7 @@ export function ValuePropSection({
                 <div
                   className={cn(
                     "hidden items-center justify-center bg-[#f4f5ff] px-6 py-6 md:flex",
-                    "md:border-l md:border-zinc-200/60",
-                    isFirst && "md:rounded-tr-[2.5rem]",
-                    isLast && "md:rounded-br-[2.5rem]"
+                    "md:border-l md:border-zinc-200/60"
                   )}
                 >
                   <FeatureIndicator positive={feature.chatgpt} />

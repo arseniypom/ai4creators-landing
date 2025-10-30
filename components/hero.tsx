@@ -15,6 +15,25 @@ export function Hero({
   description,
   ctaLabel,
 }: HeroProps) {
+  const renderTitlePrimary = (text: string) => {
+    const target = "your instagram";
+    const lower = text.toLowerCase();
+    const idx = lower.indexOf(target);
+    if (idx !== -1) {
+      const before = text.slice(0, idx);
+      const after = text.slice(idx + target.length);
+      return (
+        <>
+          {before}
+          <em>any</em>
+          {" "}
+          Instagram
+          {after}
+        </>
+      );
+    }
+    return text;
+  };
   const handleJoinWaitlistClick = () => {
     const target = document.querySelector("#waitlist");
     if (target instanceof HTMLElement) {
@@ -30,8 +49,8 @@ export function Hero({
         {eyebrow}
       </span>
       <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-zinc-900 sm:text-5xl md:text-6xl">
-        {titlePrimary}{" "}
-        <span className="bg-gradient-to-r from-[#a855f7] via-[#ec4899] to-[#f97316] bg-clip-text text-transparent">
+        <span className="block">{renderTitlePrimary(titlePrimary)}</span>
+        <span className="block bg-gradient-to-r from-[#a855f7] via-[#ec4899] to-[#f97316] bg-clip-text text-transparent">
           {titleHighlight}
         </span>
       </h1>
