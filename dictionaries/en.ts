@@ -37,9 +37,9 @@ const dictionary = {
       {
         title: "Strategy: research and 1-month plan",
         description:
-          "Fill a short form. AI analyzes your niche and goals and delivers a detailed report with deep marketing research and a personalized 1-month content plan.",
+          "Complete a guided brief. AI analyzes your niche and goals and delivers a detailed report with deep market research and a personalized 1‑month content plan.",
         highlights: [
-          "Short form: blog size, niche, goals, constraints",
+          "Guided brief that captures all key context — niche, audience, offers, constraints",
           "Deep marketing research tailored to your niche",
           "Personalized 1-month content plan",
           "Profile design (bio, highlights)",
@@ -89,7 +89,7 @@ const dictionary = {
     },
     features: [
       {
-        label: "Short form: niche, audience, offers, constraints",
+        label: "Guided brief that captures all key context — niche, audience, offers, constraints",
         instagrow: true,
         chatgpt: false,
       },

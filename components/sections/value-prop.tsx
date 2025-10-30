@@ -22,18 +22,18 @@ export function ValuePropSection({
 }: ValuePropSectionProps) {
   return (
     <section className="flex flex-col gap-8 px-6 py-16 sm:px-12">
-      <div className="flex flex-col gap-4">
-        <h2 className="text-2xl font-semibold sm:text-3xl">{title}</h2>
-        <p className="max-w-3xl text-base text-zinc-600 sm:text-lg">{description}</p>
+      <div className="mx-auto w-full max-w-4xl flex flex-col gap-4 text-left">
+        <h2 className="text-left text-2xl font-semibold sm:text-3xl">{title}</h2>
+        <p className="max-w-3xl text-left text-base text-zinc-600 sm:text-lg">{description}</p>
       </div>
 
-      <div className="mt-4 overflow-hidden">
-        <div className="hidden grid-cols-[minmax(0,2fr)_minmax(0,0.5fr)_minmax(0,0.5fr)] border-b border-zinc-200 md:grid">
+      <div className="mt-4 overflow-hidden mx-auto max-w-4xl">
+        <div className="hidden grid-cols-[minmax(0,2fr)_minmax(0,0.5fr)_minmax(0,0.5fr)] border-b border-zinc-300 md:grid">
           <div />
-          <div className="flex items-center justify-center bg-[#e3e7ff] px-8 py-5 text-sm font-semibold uppercase tracking-wide text-zinc-600 md:border-l md:border-zinc-200/60 md:rounded-t-[2.5rem]">
+          <div className="flex items-center justify-center bg-[#e3e7ff] px-8 py-4 text-sm font-semibold uppercase tracking-wide text-zinc-600 md:rounded-t-[2.5rem]">
             {columns.instagrow}
           </div>
-          <div className="flex items-center justify-center bg-zinc-100 px-8 py-5 text-sm font-semibold uppercase tracking-wide text-zinc-600 md:border-l md:border-zinc-200/60 md:rounded-t-[2.5rem]">
+          <div className="flex items-center justify-center bg-zinc-100 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-zinc-600 md:rounded-t-[2.5rem]">
             {columns.chatgpt}
           </div>
         </div>
@@ -47,10 +47,10 @@ export function ValuePropSection({
                 key={feature.label}
                 className={cn(
                   "grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(0,0.5fr)_minmax(0,0.5fr)]",
-                  !isLast && "border-b border-zinc-200"
+                  !isLast && "border-b border-zinc-300"
                 )}
               >
-                <div className="px-6 py-4 text-base text-zinc-700 sm:px-8 sm:text-lg">
+                <div className="px-6 py-3 text-sm text-zinc-700 sm:px-8 sm:text-base">
                   {feature.label}
 
                   <div className="mt-4 flex flex-wrap gap-4 text-sm text-zinc-600 md:hidden">
@@ -67,8 +67,7 @@ export function ValuePropSection({
 
                 <div
                   className={cn(
-                    "hidden items-center justify-center bg-[#e3e7ff] px-6 py-4 md:flex",
-                    "md:border-l md:border-zinc-200",
+                    "hidden items-center justify-center bg-[#e3e7ff] px-6 py-3 md:flex",
                     isLast && "md:rounded-bl-[2.5rem] md:rounded-br-[2.5rem]"
                   )}
                 >
@@ -77,8 +76,7 @@ export function ValuePropSection({
 
                 <div
                   className={cn(
-                    "hidden items-center justify-center bg-zinc-100 px-6 py-4 md:flex",
-                    "md:border-l md:border-zinc-200",
+                    "hidden items-center justify-center bg-zinc-100 px-6 py-3 md:flex",
                     isLast && "md:rounded-bl-[2.5rem] md:rounded-br-[2.5rem]"
                   )}
                 >
