@@ -144,7 +144,7 @@ const dictionary = {
     ],
   },
   waitlist: {
-    title: "Be the first to try and finally get results",
+    title: "Be the first to try — and finally see results!",
     description:
       "Join our waitlist and get notified when the app is launched.\nNo spam, no newsletter.",
     emailPlaceholder: "Enter your email",

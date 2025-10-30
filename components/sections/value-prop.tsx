@@ -30,10 +30,10 @@ export function ValuePropSection({
       <div className="mt-4 overflow-hidden">
         <div className="hidden grid-cols-[minmax(0,2fr)_minmax(0,0.5fr)_minmax(0,0.5fr)] border-b border-zinc-200 md:grid">
           <div />
-          <div className="flex items-center justify-center bg-[#f4f5ff] px-8 py-5 text-sm font-semibold uppercase tracking-wide text-zinc-600 md:border-l md:border-zinc-200/60">
+          <div className="flex items-center justify-center bg-[#e3e7ff] px-8 py-5 text-sm font-semibold uppercase tracking-wide text-zinc-600 md:border-l md:border-zinc-200/60 md:rounded-t-[2.5rem]">
             {columns.instagrow}
           </div>
-          <div className="flex items-center justify-center bg-[#f4f5ff] px-8 py-5 text-sm font-semibold uppercase tracking-wide text-zinc-600 md:border-l md:border-zinc-200/60">
+          <div className="flex items-center justify-center bg-zinc-100 px-8 py-5 text-sm font-semibold uppercase tracking-wide text-zinc-600 md:border-l md:border-zinc-200/60 md:rounded-t-[2.5rem]">
             {columns.chatgpt}
           </div>
         </div>
@@ -50,7 +50,7 @@ export function ValuePropSection({
                   !isLast && "border-b border-zinc-200"
                 )}
               >
-                <div className="px-6 py-6 text-base text-zinc-700 sm:px-8 sm:text-lg">
+                <div className="px-6 py-4 text-base text-zinc-700 sm:px-8 sm:text-lg">
                   {feature.label}
 
                   <div className="mt-4 flex flex-wrap gap-4 text-sm text-zinc-600 md:hidden">
@@ -67,8 +67,9 @@ export function ValuePropSection({
 
                 <div
                   className={cn(
-                    "hidden items-center justify-center bg-[#f4f5ff] px-6 py-6 md:flex",
-                    "md:border-l md:border-zinc-200/60"
+                    "hidden items-center justify-center bg-[#e3e7ff] px-6 py-4 md:flex",
+                    "md:border-l md:border-zinc-200",
+                    isLast && "md:rounded-bl-[2.5rem] md:rounded-br-[2.5rem]"
                   )}
                 >
                   <FeatureIndicator positive={feature.instagrow} />
@@ -76,8 +77,9 @@ export function ValuePropSection({
 
                 <div
                   className={cn(
-                    "hidden items-center justify-center bg-[#f4f5ff] px-6 py-6 md:flex",
-                    "md:border-l md:border-zinc-200/60"
+                    "hidden items-center justify-center bg-zinc-100 px-6 py-4 md:flex",
+                    "md:border-l md:border-zinc-200",
+                    isLast && "md:rounded-bl-[2.5rem] md:rounded-br-[2.5rem]"
                   )}
                 >
                   <FeatureIndicator positive={feature.chatgpt} />
