@@ -65,5 +65,6 @@ export type Dictionary = {
     description: string
     emailPlaceholder: string
     cta: string
+    rotatingWords: readonly string[]
   }
 }

@@ -149,6 +149,7 @@ const dictionary = {
       "Join our waitlist and get notified when the app is launched.\nNo spam, no newsletter.",
     emailPlaceholder: "Enter your email",
     cta: "Join waitlist",
+    rotatingWords: ["views", "followers", "engagement", "sales"],
   },
 } satisfies Dictionary
 

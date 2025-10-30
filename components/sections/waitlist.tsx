@@ -1,19 +1,30 @@
 import Script from 'next/script';
+import { WordRotate } from '@/components/ui/word-rotate';
 
 type WaitlistSectionProps = {
   title: string;
   description: string;
   emailPlaceholder: string;
   ctaLabel: string;
+  rotatingWords: readonly string[];
 };
 
-export function WaitlistSection({ title, description }: WaitlistSectionProps) {
+export function WaitlistSection({
+  title,
+  description,
+  rotatingWords,
+}: WaitlistSectionProps) {
   return (
-    <section id="waitlist" className="flex flex-col gap-8 px-6 py-12 sm:px-12 bg-[#f4f5ff]">
+    <section
+      id="waitlist"
+      className="flex flex-col gap-8 px-6 py-12 sm:px-12 bg-[#f4f5ff]"
+    >
       <div className="max-w-lg mx-auto text-center">
         <div className="flex flex-col gap-4 mb-4">
           <h2 className="text-2xl font-semibold sm:text-3xl">{title}</h2>
-          <p className="max-w-2xl whitespace-pre-line text-base text-zinc-600">{description}</p>
+          <p className="max-w-2xl whitespace-pre-line text-base text-zinc-600">
+            {description}
+          </p>
         </div>
         <Script
           id="waitlist-css-loader"
@@ -34,6 +45,19 @@ head.appendChild(link);
           data-waitlist_id="31722"
           data-widget_type="WIDGET_2"
         ></div>
+        <div className="flex items-baseline justify-center gap-2">
+          <span
+            aria-hidden="true"
+            className="text-3xl font-medium text-zinc-700"
+          >
+            +
+          </span>
+            <WordRotate
+              words={rotatingWords}
+              className="text-3xl font-medium text-zinc-700"
+              duration={2200}
+            />
+        </div>
       </div>
     </section>
   );

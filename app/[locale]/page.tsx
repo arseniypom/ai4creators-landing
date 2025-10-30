@@ -62,6 +62,7 @@ export default async function Home({
           description={waitlist.description}
           emailPlaceholder={waitlist.emailPlaceholder}
           ctaLabel={waitlist.cta}
+          rotatingWords={waitlist.rotatingWords}
         />
 
         <FaqSection
