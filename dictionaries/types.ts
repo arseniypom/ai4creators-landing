@@ -31,6 +31,16 @@ export type Dictionary = {
       icon: "sparkles" | "rocket"
     }[]
   }
+  screenshots: {
+    title: string
+    description: string
+    items: readonly {
+      title: string
+      description: string
+      imageSrc: string
+      imageAlt?: string
+    }[]
+  }
   whatWeDo: {
     title: string
     steps: readonly {

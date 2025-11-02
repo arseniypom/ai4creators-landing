@@ -4,6 +4,7 @@ import { ValuePropSection } from "@/components/sections/value-prop"
 import { WaitlistSection } from "@/components/sections/waitlist"
 import { HowItWorks } from "@/components/sections/how-it-works"
 import { FaqSection } from "@/components/sections/faq"
+import { ScreenshotsSection } from "@/components/sections/screenshots"
 import { resolveLocale } from "@/i18n-config"
 import { getDictionary } from "@/lib/get-dictionary"
 
@@ -15,7 +16,7 @@ export default async function Home({
   const { locale } = await params
   const resolvedLocale = resolveLocale(locale)
   const dictionary = await getDictionary(resolvedLocale)
-  const { header, hero, howItWorks, valueProp, waitlist, faq } = dictionary
+  const { header, hero, howItWorks, screenshots, valueProp, waitlist, faq } = dictionary
 
   return (
     <div className="min-h-screen bg-zinc-50 py-10 text-zinc-900">
@@ -39,6 +40,12 @@ export default async function Home({
           title={howItWorks.title}
           description={howItWorks.description}
           steps={howItWorks.steps}
+        />
+
+        <ScreenshotsSection
+          title={screenshots.title}
+          description={screenshots.description}
+          items={screenshots.items}
         />
 
         {/* TODO: Re-enable WhatWeDo section when refreshed content/design is ready */}

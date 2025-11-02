@@ -62,6 +62,33 @@ const dictionary = {
       },
     ],
   },
+  screenshots: {
+    title: "See InstaGrow in Action",
+    description:
+      "From creating a project to getting your strategy report — a quick peek at the product flow.",
+    items: [
+      {
+        title: "Project creation",
+        description: "Set up your Instagram content workspace in seconds.",
+        imageSrc: "/images/screenshots/create-a-project.png",
+      },
+      {
+        title: "Brief",
+        description: "Answer guided questions to build your strategy foundation.",
+        imageSrc: "/images/screenshots/brief.png",
+      },
+      {
+        title: "Strategy report",
+        description: "Comprehensive insights and a clear action plan.",
+        imageSrc: "/images/screenshots/content-strategy-v2-1.png",
+      },
+      {
+        title: "Strategy report",
+        description: "Audience insights, pillars and formats tailored to you.",
+        imageSrc: "/images/screenshots/content-strategy-v2-2.png",
+      },
+    ],
+  },
   whatWeDo: {
     title: "What can InstaGrow do for you?",
     steps: [

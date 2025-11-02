@@ -62,6 +62,33 @@ const dictionary = {
       },
     ],
   },
+  screenshots: {
+    title: "Посмотрите InstaGrow в действии",
+    description:
+      "От создания проекта до готового отчёта по стратегии — краткий взгляд на продукт.",
+    items: [
+      {
+        title: "Создание проекта",
+        description: "Настройте рабочее пространство для контента за секунды.",
+        imageSrc: "/images/screenshots/create-a-project.png",
+      },
+      {
+        title: "Бриф",
+        description: "Ответьте на вопросы, чтобы заложить фундамент стратегии.",
+        imageSrc: "/images/screenshots/brief.png",
+      },
+      {
+        title: "Подробный отчёт и стратегия",
+        description: "Глубокие инсайты и понятный план действий.",
+        imageSrc: "/images/screenshots/content-strategy-v2-1.png",
+      },
+      {
+        title: "Подробный отчёт и стратегия",
+        description: "Аналитика аудитории, столпы и форматы под ваш бренд.",
+        imageSrc: "/images/screenshots/content-strategy-v2-2.png",
+      },
+    ],
+  },
   whatWeDo: {
     title: "Что InstaGrow сделает для вас?",
     steps: [
