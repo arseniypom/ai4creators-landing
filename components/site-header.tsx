@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { MouseEvent, Suspense } from "react"
 
 import { i18n, type Locale } from "@/i18n-config"
@@ -42,7 +43,10 @@ export function SiteHeader({
 
   return (
     <header className="flex gap-4 border-b border-zinc-200 px-6 py-6 flex-row items-center justify-between sm:px-12">
-      <span className="text-lg font-semibold sm:text-xl">{brand}</span>
+      <div className="flex items-center gap-2">
+        <Image src="/logo.svg?v=2" alt={brand} width={30} height={30} priority />
+        <span className="text-lg font-semibold sm:text-xl">{brand}</span>
+      </div>
       <div className="flex gap-3 flex-row items-center sm:gap-4">
         <Suspense fallback={null}>
           <LocaleSwitcher
