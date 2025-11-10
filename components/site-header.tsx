@@ -27,6 +27,7 @@ export function SiteHeader({
   locale,
   localeSwitcher,
 }: SiteHeaderProps) {
+  const SHOW_LOCALE_SWITCHER = false
   const handleCtaClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (!ctaHref.startsWith("#")) {
       return
@@ -48,15 +49,17 @@ export function SiteHeader({
         <span className="text-lg font-semibold sm:text-xl">{brand}</span>
       </div>
       <div className="flex gap-3 flex-row items-center sm:gap-4">
-        <Suspense fallback={null}>
-          <LocaleSwitcher
-            currentLocale={locale}
-            label={localeSwitcher.label}
-            shortNames={localeSwitcher.shortNames}
-            localeNames={localeSwitcher.localeNames}
-            availableLocales={i18n.locales}
-          />
-        </Suspense>
+        {SHOW_LOCALE_SWITCHER && (
+          <Suspense fallback={null}>
+            <LocaleSwitcher
+              currentLocale={locale}
+              label={localeSwitcher.label}
+              shortNames={localeSwitcher.shortNames}
+              localeNames={localeSwitcher.localeNames}
+              availableLocales={i18n.locales}
+            />
+          </Suspense>
+        )}
         <Link
           href={ctaHref}
           onClick={handleCtaClick}

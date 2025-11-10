@@ -1,4 +1,4 @@
-import { i18n, isLocale, type Locale } from "@/i18n-config"
+import { i18n, type Locale } from "@/i18n-config"
 
 export function getPreferredLocale(
   acceptLanguage: string | null | undefined,
@@ -7,23 +7,49 @@ export function getPreferredLocale(
     return i18n.defaultLocale
   }
 
-  const preferredLocales = acceptLanguage
+  type LanguagePreference = { tag: string; q: number; index: number }
+  const preferences: LanguagePreference[] = acceptLanguage
     .split(",")
-    .map((part) => part.trim().split(";")[0])
-    .filter(Boolean)
+    .map((raw, index) => {
+      const [tagRaw, qPart] = raw.trim().split(";")
+      const tag = (tagRaw || "").toLowerCase()
+      const q =
+        qPart && qPart.trim().startsWith("q=")
+          ? Number.parseFloat(qPart.trim().slice(2))
+          : 1
+      const weight = Number.isFinite(q) ? Math.max(0, Math.min(1, q)) : 0
+      return { tag, q: weight, index }
+    })
+    .filter((p) => p.tag)
 
-  for (const locale of preferredLocales) {
-    const normalizedLocale = locale.toLowerCase()
+  const calcMaxWeightFor = (base: "en" | "ru") =>
+    preferences.reduce((max, p) => {
+      if (p.tag === base || p.tag.startsWith(`${base}-`)) {
+        return Math.max(max, p.q)
+      }
+      return max
+    }, 0)
 
-    if (isLocale(normalizedLocale)) {
-      return normalizedLocale
-    }
-
-    const baseLocale = normalizedLocale.split("-")[0]
-    if (isLocale(baseLocale)) {
-      return baseLocale
-    }
+  const findFirstIndexFor = (base: "en" | "ru") => {
+    const match = preferences.find(
+      (p) => p.tag === base || p.tag.startsWith(`${base}-`),
+    )
+    return match ? match.index : Number.POSITIVE_INFINITY
   }
 
-  return i18n.defaultLocale
+  const ruWeight = calcMaxWeightFor("ru")
+  const enWeight = calcMaxWeightFor("en")
+
+  if (ruWeight > enWeight) return "ru"
+  if (enWeight > ruWeight) return "en"
+
+  // Tie-breaker: preserve user order when weights are equal
+  const ruIndex = findFirstIndexFor("ru")
+  const enIndex = findFirstIndexFor("en")
+
+  if (ruIndex === Number.POSITIVE_INFINITY && enIndex === Number.POSITIVE_INFINITY) {
+    return i18n.defaultLocale
+  }
+  if (ruIndex < enIndex) return "ru"
+  return "en"
 }

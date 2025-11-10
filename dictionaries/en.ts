@@ -39,7 +39,7 @@ const dictionary = {
         description:
           "Complete a guided brief. AI analyzes your niche and goals and delivers a detailed report with deep market research and a personalized 1‑month content plan.",
         highlights: [
-          "Guided brief that captures all key context — niche, audience, offers, constraints",
+          "Guided brief that captures all key context — niche, audience, offers, limits",
           "Deep marketing research tailored to your niche",
           "Personalized 1-month content plan",
           "Profile design (bio, highlights)",
@@ -116,7 +116,7 @@ const dictionary = {
     },
     features: [
       {
-        label: "Guided brief that captures all key context — niche, audience, offers, constraints",
+        label: "Guided brief that captures all key context — niche, audience, offers, limits",
         instagrow: true,
         chatgpt: false,
       },
