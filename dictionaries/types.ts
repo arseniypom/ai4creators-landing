@@ -51,7 +51,7 @@ export type Dictionary = {
   }
   valueProp: {
     title: string
-    description: string
+    description: string | readonly string[]
     columns: {
       instagrow: string
       chatgpt: string

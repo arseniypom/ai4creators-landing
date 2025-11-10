@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 
 type ValuePropSectionProps = {
   title: string
-  description: string
+  description: string | readonly string[]
   columns: {
     instagrow: string
     chatgpt: string
@@ -24,7 +24,17 @@ export function ValuePropSection({
     <section className="flex flex-col gap-8 px-6 py-16 sm:px-12">
       <div className="mx-auto w-full max-w-4xl flex flex-col gap-4 text-left">
         <h2 className="text-left text-2xl font-semibold sm:text-3xl">{title}</h2>
-        <p className="max-w-3xl text-left text-base text-zinc-600 sm:text-lg">{description}</p>
+        {Array.isArray(description) ? (
+          <div className="max-w-3xl text-left text-base text-zinc-600 sm:text-lg">
+            {description.map((line, idx) => (
+              <p key={idx} className={idx > 0 ? "mt-2" : undefined}>
+                {line}
+              </p>
+            ))}
+          </div>
+        ) : (
+          <p className="max-w-3xl text-left text-base text-zinc-600 sm:text-lg">{description}</p>
+        )}
       </div>
 
       <div className="mt-4 overflow-hidden mx-auto max-w-4xl">

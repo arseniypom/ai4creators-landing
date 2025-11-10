@@ -107,38 +107,42 @@ const dictionary = {
     ],
   },
   valueProp: {
-    title: "Why can't I just do this with ChatGPT?",
-    description:
-      "You can try — but only our system includes:",
+    title: "Why not just use ChatGPT?",
+    description: [
+      "Because ChatGPT gives you text — not results.",
+      "Our model was trained on hundreds of proven content frameworks — the same strategies used in top marketing courses and viral creators’ playbooks.",
+      "So you don’t have to guess, prompt, or rewrite — it just works.",
+    ],
     columns: {
       instagrow: "InstaGrow",
       chatgpt: "ChatGPT",
     },
     features: [
       {
-        label: "Guided brief that captures all key context — niche, audience, offers, limits",
+        label:
+          "Trained on real viral content patterns — knows what actually works",
         instagrow: true,
         chatgpt: false,
       },
       {
         label:
-          "Expert market analysis tailored to your niche and competitors",
+          "Understands your niche, audience & brand tone",
         instagrow: true,
         chatgpt: false,
       },
       {
-        label: "Reels scripts from proven viral formats, tailored to your niche",
-        instagrow: true,
-        chatgpt: false,
-      },
-      {
-        label: "Understands your brand context and goals to stay on‑message",
+        label: "Builds a full content funnel (not random ideas)",
         instagrow: true,
         chatgpt: false,
       },
       {
         label:
-          "Natural tone, clear structure, strong hooks and action‑driving CTAs",
+          "No prompt engineering needed — guided brief does the work for you",
+        instagrow: true,
+        chatgpt: false,
+      },
+      {
+        label: "Saves hours of manual tweaking & rewrites",
         instagrow: true,
         chatgpt: false,
       },
