@@ -48,31 +48,33 @@ const dictionary = {
   howItWorks: {
     title: "How It Works",
     description:
-      "Get a deep marketing research, a personalized 1-month content plan, and generate viral Reels scripts with 1 click",
+      "Get a deep marketing research, and generate viral Reels scripts with 1 click",
     steps: [
       {
-        title: "Strategy: research and 1-month plan",
+        title: "Marketing Strategy",
+        subtitle: "Finally know what to post — and why it works.",
         description:
-          "Complete a guided brief. AI analyzes your niche and goals and delivers a detailed report with deep market research and a personalized 1‑month content plan.",
+          "Complete a short brief, InstaGrow turns it into a strategy built for your goals.",
+        preHighlights: "You’ll get:",
         highlights: [
-          "Guided brief that captures all key context — niche, audience, offers, limits",
-          "Deep marketing research tailored to your niche",
-          "Personalized 1-month content plan",
-          "Profile design (bio, highlights)",
-          "Audience analysis: habits, interests, pains, personas",
-          "Plan tailored to your goals: follower growth, engagement, clients",
+          "🎯 Audience insights — know who your followers are and what drives them.",
+          "🧭 Brand positioning — define your voice and stand out.",
+          "🗓️ Content strategy — formats and ideas that fit your goal.",
+          "💬 Profile optimization — turn your Instagram profile into a magnet.",
         ],
         icon: "sparkles",
       },
       {
-        title: "Generate viral Reels scripts and posts",
+        title: "Content Engine",
+        subtitle: "Turn insights into viral Reels — in one click.",
         description:
-          "All insights from the strategy step are already in the system, so AI deeply understands your project. Generate from the plan or type your Reels idea, click ‘Generate’, and get a ready-to-use script with the right hook, engaging body, and a clear CTA.",
+          "Once your research is done, InstaGrow writes content that sounds like you and performs like top creators.",
+        preHighlights: "You’ll get:",
         highlights: [
-          "Uses your full strategy context — AI knows your project",
-          "One‑click generation from the plan or your idea",
-          "Scripts include a strong hook, engaging body, and CTA",
-          "Precise edits: tweak yourself or ask AI (e.g., change the hook, add details)",
+          "⚡ Reels scripts — built from viral patterns in your niche.",
+          "🧩 Instant generation — your idea becomes a Reel in seconds.",
+          "🎥 Hooks, stories, CTAs — ready to shoot and perform.",
+          "✏️ Quick edits — change tone, length, or format in seconds.",
         ],
         icon: "rocket",
       },

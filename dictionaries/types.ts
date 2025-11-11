@@ -41,7 +41,9 @@ export type Dictionary = {
     description: string
     steps: readonly {
       title: string
+      subtitle?: string
       description: string
+      preHighlights?: string
       highlights: readonly string[]
       icon: "sparkles" | "rocket"
     }[]
