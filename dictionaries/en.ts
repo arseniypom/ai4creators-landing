@@ -182,6 +182,43 @@ const dictionary = {
     cta: "Join waitlist",
     rotatingWords: ["views", "followers", "engagement", "sales"],
   },
+  pricing: {
+    title: "Tariffs",
+    description: "Choose the plan that fits. Benefits are placeholders for now.",
+    badgePopular: "Most popular",
+    tiers: [
+      {
+        name: "Starter",
+        price: 9,
+        period: "/mo",
+        benefits: ["Placeholder benefit A", "Placeholder benefit B", "Placeholder benefit C"],
+      },
+      {
+        name: "Pro",
+        price: 29,
+        period: "/mo",
+        highlight: true,
+        benefits: [
+          "Placeholder benefit A",
+          "Placeholder benefit B",
+          "Placeholder benefit C",
+          "Placeholder benefit D",
+        ],
+      },
+      {
+        name: "Scale",
+        price: 99,
+        period: "/mo",
+        benefits: [
+          "Placeholder benefit A",
+          "Placeholder benefit B",
+          "Placeholder benefit C",
+          "Placeholder benefit D",
+          "Placeholder benefit E",
+        ],
+      },
+    ],
+  },
 } satisfies Dictionary
 
 export default dictionary

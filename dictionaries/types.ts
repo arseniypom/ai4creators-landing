@@ -77,4 +77,16 @@ export type Dictionary = {
     cta: string
     rotatingWords: readonly string[]
   }
+  pricing: {
+    title: string
+    description: string
+    badgePopular: string
+    tiers: readonly {
+      name: string
+      price: number
+      period: string
+      highlight?: boolean
+      benefits: readonly string[]
+    }[]
+  }
 }
