@@ -1,25 +1,35 @@
-import { Hero } from "@/components/hero"
-import { SiteHeader } from "@/components/site-header"
-import { ValuePropSection } from "@/components/sections/value-prop"
-import { WaitlistSection } from "@/components/sections/waitlist"
-import { HowItWorks } from "@/components/sections/how-it-works"
-import { FaqSection } from "@/components/sections/faq"
-import { ScreenshotsSection } from "@/components/sections/screenshots"
-import { PricingSection } from "@/components/sections/pricing"
-import { resolveLocale } from "@/i18n-config"
-import { getDictionary } from "@/lib/get-dictionary"
+import { Hero } from '@/components/hero';
+import { SiteHeader } from '@/components/site-header';
+import { ValuePropSection } from '@/components/sections/value-prop';
+import { WaitlistSection } from '@/components/sections/waitlist';
+import { HowItWorks } from '@/components/sections/how-it-works';
+import { FaqSection } from '@/components/sections/faq';
+import { ScreenshotsSection } from '@/components/sections/screenshots';
+import { PricingSection } from '@/components/sections/pricing';
+import { resolveLocale } from '@/i18n-config';
+import { getDictionary } from '@/lib/get-dictionary';
 
-const SHOW_PRICING = process.env.NEXT_PUBLIC_ENABLE_PRICING === "true"
+const SHOW_PRICING = process.env.NEXT_PUBLIC_ENABLE_PRICING === 'true';
 
 export default async function Home({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params
-  const resolvedLocale = resolveLocale(locale)
-  const dictionary = await getDictionary(resolvedLocale)
-  const { header, hero, howItWorks, screenshots, valueProp, pricing, waitlist, faq } = dictionary
+  const { locale } = await params;
+  const resolvedLocale = resolveLocale(locale);
+  const dictionary = await getDictionary(resolvedLocale);
+  const {
+    header,
+    hero,
+    howItWorks,
+    screenshots,
+    valueProp,
+    pricing,
+    waitlist,
+    faq,
+    cta,
+  } = dictionary;
 
   return (
     <div className="min-h-screen bg-zinc-50 py-10 text-zinc-900">
@@ -70,7 +80,6 @@ export default async function Home({
         {SHOW_PRICING && (
           <PricingSection
             title={pricing.title}
-            description={pricing.description}
             tiers={pricing.tiers}
             badgePopular={pricing.badgePopular}
           />
@@ -79,9 +88,9 @@ export default async function Home({
         <WaitlistSection
           title={waitlist.title}
           description={waitlist.description}
-          emailPlaceholder={waitlist.emailPlaceholder}
-          ctaLabel={waitlist.cta}
           rotatingWords={waitlist.rotatingWords}
+          payNowLabel={cta.pay_now}
+          helperText={waitlist.helper_text ?? ''}
         />
 
         <FaqSection
@@ -91,5 +100,5 @@ export default async function Home({
         />
       </main>
     </div>
-  )
+  );
 }

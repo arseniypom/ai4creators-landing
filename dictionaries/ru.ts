@@ -1,6 +1,22 @@
 import type { Dictionary } from "./types"
 
 const dictionary = {
+  cta: {
+    pay_now: "Я готов!",
+  },
+  dialog: {
+    title: "Введите ваш email",
+    email: "Email",
+    submit: "Отправить",
+    cancel: "Отмена",
+    error: "Пожалуйста, попробуйте ещё раз",
+  },
+  success: {
+    message: {
+      purchase_flow:
+        "Мы свяжемся с вами в течение 24 часов, чтобы отправить ссылку на оплату и доставить ваш заказ.",
+    },
+  },
   metadata: {
     title: "InstaGrow — умный помощник роста в Instagram",
     description:
@@ -176,16 +192,16 @@ const dictionary = {
     ],
   },
   waitlist: {
-    title: "Будьте первыми, кто попробует и увидит результат",
+    title: "получи отчет по твоему профилю + 10 Reels-сценариев за 9$",
     description:
       "Присоединяйтесь к листу ожидания и получите уведомление о запуске. Никакого спама и рассылок.",
     emailPlaceholder: "Введите email",
     cta: "Присоединиться к листу ожидания",
+    helper_text: "или оставьте email и узнайте о запуске первыми",
     rotatingWords: ["просмотры", "подписчики", "вовлеченность", "продажи"],
   },
   pricing: {
     title: "Тарифы",
-    description: "Выберите подходящий план. Преимущества пока-заглушки.",
     badgePopular: "Самый популярный",
     tiers: [
       {

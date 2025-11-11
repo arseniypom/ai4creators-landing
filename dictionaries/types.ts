@@ -5,6 +5,21 @@ export type Dictionary = {
     title: string
     description: string
   }
+  cta: {
+    pay_now: string
+  }
+  dialog: {
+    title: string
+    email: string
+    submit: string
+    cancel: string
+    error?: string
+  }
+  success: {
+    message: {
+      purchase_flow: string
+    }
+  }
   header: {
     brand: string
     cta: string
@@ -75,11 +90,11 @@ export type Dictionary = {
     description: string
     emailPlaceholder: string
     cta: string
+    helper_text?: string
     rotatingWords: readonly string[]
   }
   pricing: {
     title: string
-    description: string
     badgePopular: string
     tiers: readonly {
       name: string

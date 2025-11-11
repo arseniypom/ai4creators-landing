@@ -1,6 +1,22 @@
 import type { Dictionary } from "./types"
 
 const dictionary = {
+  cta: {
+    pay_now: "I'm ready",
+  },
+  dialog: {
+    title: "Enter your email",
+    email: "Email",
+    submit: "Submit",
+    cancel: "Cancel",
+    error: "Please try again",
+  },
+  success: {
+    message: {
+      purchase_flow:
+        "We’ll contact you within 24 hours to send the payment link and deliver your order.",
+    },
+  },
   metadata: {
     title: "InstaGrow — Smart Instagram Growth Companion",
     description:
@@ -175,16 +191,17 @@ const dictionary = {
     ],
   },
   waitlist: {
-    title: "Be the first to try — and finally see results!",
+    title: "Get a profile report + 10 Reels scripts for $9!",
     description:
       "Join our waitlist and get notified when the app is launched.\nNo spam, no newsletter.",
     emailPlaceholder: "Enter your email",
     cta: "Join waitlist",
+    helper_text:
+      "or leave your email and be the first to know when we launch",
     rotatingWords: ["views", "followers", "engagement", "sales"],
   },
   pricing: {
     title: "Tariffs",
-    description: "Choose the plan that fits. Benefits are placeholders for now.",
     badgePopular: "Most popular",
     tiers: [
       {

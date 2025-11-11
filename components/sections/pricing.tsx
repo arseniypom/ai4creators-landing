@@ -1,22 +1,25 @@
-import { Check } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { Check } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 type PricingTier = {
-  name: string
-  price: number
-  period: string
-  highlight?: boolean
-  benefits: readonly string[]
-}
+  name: string;
+  price: number;
+  period: string;
+  highlight?: boolean;
+  benefits: readonly string[];
+};
 
 type PricingSectionProps = {
-  title: string
-  description: string
-  tiers: readonly PricingTier[]
-  badgePopular: string
-}
+  title: string;
+  tiers: readonly PricingTier[];
+  badgePopular: string;
+};
 
-export function PricingSection({ title, description, tiers, badgePopular }: PricingSectionProps) {
+export function PricingSection({
+  title,
+  tiers,
+  badgePopular,
+}: PricingSectionProps) {
   return (
     <section className="relative px-6 py-20 sm:px-12">
       <div
@@ -25,8 +28,9 @@ export function PricingSection({ title, description, tiers, badgePopular }: Pric
       />
 
       <div className="mx-auto flex max-w-2xl flex-col items-center gap-3 text-center">
-        <h2 className="text-3xl font-semibold text-zinc-900 sm:text-4xl">{title}</h2>
-        <p className="text-lg text-zinc-600 sm:text-xl">{description}</p>
+        <h2 className="text-3xl font-semibold text-zinc-900 sm:text-4xl">
+          {title}
+        </h2>
       </div>
 
       <div className="mx-auto mt-12 grid w-full max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
@@ -34,13 +38,17 @@ export function PricingSection({ title, description, tiers, badgePopular }: Pric
           <article
             key={tier.name}
             className={cn(
-              "overflow-hidden rounded-3xl border bg-white shadow-[0_40px_120px_-60px_rgba(15,23,42,0.3)]",
-              tier.highlight ? "border-[#c7c9ff] ring-2 ring-[#a7abff]/60" : "border-zinc-200"
+              'overflow-hidden rounded-3xl border bg-white shadow-[0_40px_120px_-60px_rgba(15,23,42,0.3)]',
+              tier.highlight
+                ? 'border-[#c7c9ff] ring-2 ring-[#a7abff]/60'
+                : 'border-zinc-200',
             )}
           >
             <div className="flex h-full flex-col gap-5 p-8">
               <div className="flex items-baseline justify-between">
-                <h3 className="text-lg font-semibold text-zinc-800">{tier.name}</h3>
+                <h3 className="text-lg font-semibold text-zinc-800">
+                  {tier.name}
+                </h3>
                 {tier.highlight && (
                   <span className="rounded-full bg-[#f3f4ff] px-3 py-1 text-xs font-medium text-[#4338ca]">
                     {badgePopular}
@@ -48,12 +56,19 @@ export function PricingSection({ title, description, tiers, badgePopular }: Pric
                 )}
               </div>
               <div className="flex items-end gap-2">
-                <span className="text-4xl font-semibold text-zinc-900 sm:text-5xl">${tier.price}</span>
-                <span className="pb-1 text-sm text-zinc-500">{tier.period}</span>
+                <span className="text-4xl font-semibold text-zinc-900 sm:text-5xl">
+                  ${tier.price}
+                </span>
+                <span className="pb-1 text-sm text-zinc-500">
+                  {tier.period}
+                </span>
               </div>
               <ul className="mt-2 space-y-3">
                 {tier.benefits.map((benefit, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-sm text-zinc-600">
+                  <li
+                    key={idx}
+                    className="flex items-center gap-3 text-sm text-zinc-600"
+                  >
                     <span className="mt-[2px] grid h-6 w-6 flex-none place-items-center rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-600">
                       <Check className="h-3.5 w-3.5" />
                     </span>
@@ -66,7 +81,5 @@ export function PricingSection({ title, description, tiers, badgePopular }: Pric
         ))}
       </div>
     </section>
-  )
+  );
 }
-
-
