@@ -98,6 +98,7 @@ export type Dictionary = {
     badgePopular: string
     tiers: readonly {
       name: string
+      subtitle?: string
       price: number
       period: string
       highlight?: boolean

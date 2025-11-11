@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 
 type PricingTier = {
   name: string;
+  subtitle?: string;
   price: number;
   period: string;
   highlight?: boolean;
@@ -24,7 +25,7 @@ export function PricingSection({
     <section className="relative px-6 py-20 sm:px-12">
       <div
         aria-hidden="true"
-        className="absolute inset-x-6 top-10 -z-10 h-[520px] rounded-[3rem] bg-gradient-to-b from-[#d1d4ff]/60 via-white to-white blur-3xl sm:inset-x-12"
+        className="absolute inset-x-6 top-10 -z-10 h-[520px] rounded-[3rem] bg-linear-to-b from-[#d1d4ff]/60 via-white to-white blur-3xl sm:inset-x-12"
       />
 
       <div className="mx-auto flex max-w-2xl flex-col items-center gap-3 text-center">
@@ -55,6 +56,9 @@ export function PricingSection({
                   </span>
                 )}
               </div>
+              {tier.subtitle && (
+                <p className="text-sm text-zinc-500">{tier.subtitle}</p>
+              )}
               <div className="flex items-end gap-2">
                 <span className="text-4xl font-semibold text-zinc-900 sm:text-5xl">
                   ${tier.price}
