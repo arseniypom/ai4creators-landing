@@ -6,5 +6,6 @@ export { FaqSection } from "./faq"
 export { ScreenshotsSection } from "./screenshots"
 export { PricingSection } from "./pricing"
 export { WhatWeDo } from "./what-we-do"
+export { ContactSection } from "./contact"
 
 

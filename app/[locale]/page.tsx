@@ -1,4 +1,13 @@
-import { Hero, ValuePropSection, WaitlistSection, HowItWorks, FaqSection, ScreenshotsSection, PricingSection } from '@/components/sections';
+import {
+  Hero,
+  ValuePropSection,
+  WaitlistSection,
+  HowItWorks,
+  FaqSection,
+  ScreenshotsSection,
+  PricingSection,
+  ContactSection,
+} from '@/components/sections';
 import { SiteHeader } from '@/components/layout/site-header';
 import { resolveLocale } from '@/i18n-config';
 import { getDictionary } from '@/lib/get-dictionary';
@@ -87,7 +96,6 @@ export default async function Home({
           description={waitlist.description}
           rotatingWords={waitlist.rotatingWords}
           payNowLabel={cta.pay_now}
-          helperText={waitlist.helper_text ?? ''}
         />
 
         <FaqSection
@@ -95,6 +103,8 @@ export default async function Home({
           description={faq.description}
           items={faq.items}
         />
+
+        <ContactSection />
       </main>
     </div>
   );

@@ -195,7 +195,7 @@ const dictionary = {
   waitlist: {
     title: "Join our Beta launch today",
     description:
-      "Pay $9 now & get your first Reels results in 24h + bonuses",
+      "Pay $9 now and get your first Reels results in 24h + bonuses",
     emailPlaceholder: "Enter your email",
     cta: "Join beta",
     helper_text:
