@@ -13,6 +13,7 @@ type WaitlistSectionProps = {
 
 export function WaitlistSection({
   title,
+  description,
   rotatingWords,
   payNowLabel,
   helperText,
@@ -33,6 +34,7 @@ export function WaitlistSection({
       <div className="max-w-lg mx-auto text-center">
         <div className="flex flex-col gap-4 mb-4">
           <h2 className="text-2xl font-semibold sm:text-3xl">{title}</h2>
+          <p className="text-base text-zinc-600">{description}</p>
         </div>
         <div className="flex justify-center my-5">
           <button

@@ -1,11 +1,5 @@
-import { Hero } from '@/components/hero';
-import { SiteHeader } from '@/components/site-header';
-import { ValuePropSection } from '@/components/sections/value-prop';
-import { WaitlistSection } from '@/components/sections/waitlist';
-import { HowItWorks } from '@/components/sections/how-it-works';
-import { FaqSection } from '@/components/sections/faq';
-import { ScreenshotsSection } from '@/components/sections/screenshots';
-import { PricingSection } from '@/components/sections/pricing';
+import { Hero, ValuePropSection, WaitlistSection, HowItWorks, FaqSection, ScreenshotsSection, PricingSection } from '@/components/sections';
+import { SiteHeader } from '@/components/layout/site-header';
 import { resolveLocale } from '@/i18n-config';
 import { getDictionary } from '@/lib/get-dictionary';
 

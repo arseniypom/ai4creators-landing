@@ -24,7 +24,7 @@ const dictionary = {
   },
   header: {
     brand: "InstaGrow",
-    cta: "Join waitlist",
+    cta: "Join beta",
     localeSwitcher: {
       label: "Switch language",
       shortNames: {
@@ -43,7 +43,7 @@ const dictionary = {
     titleHighlight: "Start getting results.",
     description:
       "Say goodbye to one-off posts and chaotic content plans. InstaGrow builds data-driven strategy + creator-tested content for your niche and your goal.",
-    cta: "Join the waitlist",
+    cta: "Get early access",
   },
   howItWorks: {
     title: "How It Works",
@@ -193,11 +193,11 @@ const dictionary = {
     ],
   },
   waitlist: {
-    title: "Get a profile report + 10 Reels scripts for $9!",
+    title: "🎁 Join our Beta launch today",
     description:
-      "Join our waitlist and get notified when the app is launched.\nNo spam, no newsletter.",
+      "Pay $9 now & get your first Reels results in 24h + bonuses",
     emailPlaceholder: "Enter your email",
-    cta: "Join waitlist",
+    cta: "Join beta",
     helper_text:
       "or leave your email and be the first to know when we launch",
     rotatingWords: ["views", "followers", "engagement", "sales"],

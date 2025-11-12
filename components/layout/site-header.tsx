@@ -6,7 +6,7 @@ import { MouseEvent, Suspense } from "react"
 
 import { i18n, type Locale } from "@/i18n-config"
 
-import { LocaleSwitcher } from "./locale-switcher"
+import { LocaleSwitcher } from "@/components/locale-switcher"
 
 type SiteHeaderProps = {
   brand: string
@@ -71,3 +71,5 @@ export function SiteHeader({
     </header>
   )
 }
+
+
