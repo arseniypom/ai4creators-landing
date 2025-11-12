@@ -82,6 +82,9 @@ export default async function Home({
             title={pricing.title}
             tiers={pricing.tiers}
             badgePopular={pricing.badgePopular}
+            availableSoon={pricing.availableSoon}
+            ctaFirstCard={pricing.ctaFirstCard}
+            moneybackNote={pricing.moneybackNote}
           />
         )}
 

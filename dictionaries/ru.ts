@@ -205,6 +205,9 @@ const dictionary = {
   pricing: {
     title: "Тарифы",
     badgePopular: "Лучшее предложение",
+    availableSoon: "Скоро доступно",
+    ctaFirstCard: "Получить сейчас",
+    moneybackNote: "Гарантия возврата денег",
     tiers: [
       {
         name: "Персональный",

@@ -98,11 +98,15 @@ export type Dictionary = {
   pricing: {
     title: string
     badgePopular: string
+    availableSoon: string
+    ctaFirstCard: string
+    moneybackNote: string
     tiers: readonly {
       name: string
       subtitle?: string
       price: number
       period: string
+      label?: string
       highlight?: boolean
       benefits: readonly string[]
     }[]

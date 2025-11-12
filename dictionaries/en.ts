@@ -39,10 +39,10 @@ const dictionary = {
   },
   hero: {
     eyebrow: "Your AI co-pilot for Instagram growth",
-    titlePrimary: "Grow your Instagram",
-    titleHighlight: "smarter with AI",
+    titlePrimary: "Stop guessing what to post.",
+    titleHighlight: "Start getting results.",
     description:
-      "InstaGrow helps creators and SMM professionals boost reach, engagement, and content strategy — all powered by AI.",
+      "Say goodbye to one-off posts and chaotic content plans. InstaGrow builds data-driven strategy + creator-tested content for your niche and your goal.",
     cta: "Join the waitlist",
   },
   howItWorks: {
@@ -205,12 +205,28 @@ const dictionary = {
   pricing: {
     title: "Pricing",
     badgePopular: "Best value",
+    availableSoon: "Available soon",
+    ctaFirstCard: "Get it now",
+    moneybackNote: "Money‑back guarantee",
     tiers: [
+      {
+        name: "Early Access + Bonuses 🎉",
+        subtitle: "Limited time offer",
+        price: 9,
+        period: "single payment",
+        benefits: [
+          "In-depth profile report",
+          "Content strategy",
+          "10 viral reels scripts",
+          "1mo Pro access when we launch",
+        ],
+      },
       {
         name: "Personal",
         subtitle: "Perfect for solo-creators & experts",
         price: 9,
         period: "/ month",
+        label: "Available soon",
         benefits: [
           "1 account",
           "1 deep Marketing Research report",
@@ -223,6 +239,7 @@ const dictionary = {
         subtitle: "Perfect for SMMs & small teams",
         price: 39,
         period: "/ month",
+        label: "Available soon",
         highlight: true,
         benefits: [
           "Up to 5 accounts",
@@ -231,19 +248,6 @@ const dictionary = {
           "Weekly trending audios",
           "30-day content calendar",
           "Export to Notion or client PDF",
-        ],
-      },
-      {
-        name: "Business",
-        subtitle: "Perfect for agencies and studios",
-        price: 99,
-        period: "/ month",
-        benefits: [
-          "Up to 10 accounts / brands",
-          "10 included Marketing Research reports",
-          "100 Reels scripts per month",
-          "Team dashboard + client approval mode",
-          "White-label exports & multi-language support",
         ],
       },
     ],
