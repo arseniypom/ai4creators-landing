@@ -193,7 +193,7 @@ const dictionary = {
     ],
   },
   waitlist: {
-    title: "🎁 Join our Beta launch today",
+    title: "Join our Beta launch today",
     description:
       "Pay $9 now & get your first Reels results in 24h + bonuses",
     emailPlaceholder: "Enter your email",

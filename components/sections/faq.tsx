@@ -20,7 +20,7 @@ export function FaqSection({ title, description, items }: FaqSectionProps) {
       />
 
       <div className="flex flex-col items-center gap-3 text-center">
-        <h2 className="bg-gradient-to-r from-[#6366f1] via-[#a855f7] to-[#ec4899] bg-clip-text text-3xl font-semibold text-transparent sm:text-4xl">
+        <h2 className="text-3xl font-semibold text-zinc-900 sm:text-4xl">
           {title}
         </h2>
         <p className="max-w-2xl whitespace-pre-line text-base text-zinc-600 sm:text-lg">{description}</p>

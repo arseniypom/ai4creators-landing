@@ -33,7 +33,14 @@ export function WaitlistSection({
     >
       <div className="max-w-lg mx-auto text-center">
         <div className="flex flex-col gap-4 mb-4">
-          <h2 className="text-2xl font-semibold sm:text-3xl">{title}</h2>
+          <div className="flex items-center justify-center gap-3">
+            <span aria-hidden="true" className="text-3xl sm:text-4xl">
+              🎁
+            </span>
+            <h2 className="bg-linear-to-r from-[#6366f1] via-[#a855f7] to-[#ec4899] bg-clip-text text-3xl font-semibold text-transparent sm:text-4xl">
+              {title}
+            </h2>
+          </div>
           <p className="text-base text-zinc-600">{description}</p>
         </div>
         <div className="flex justify-center my-5">
