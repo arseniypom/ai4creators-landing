@@ -101,7 +101,7 @@ export function PricingSection({
                 <div className="mt-auto pt-2 flex flex-col gap-1">
                   <a
                     href="#waitlist"
-                    className="inline-flex w-full items-center justify-center rounded-full bg-linear-to-r from-[#a855f7] via-[#ec4899] to-[#f97316] px-6 py-3.5 text-sm font-medium text-white shadow-[0_24px_54px_-22px_rgba(168,85,247,0.85)] transition-transform duration-200 hover:scale-[1.03] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ec4899]"
+                    className="inline-flex w-full items-center justify-center rounded-full bg-[#6366f1] px-6 py-3.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#555ae9] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6366f1]"
                   >
                     {ctaFirstCard}
                   </a>
