@@ -28,7 +28,7 @@ export function WaitlistSection({
   return (
     <section
       id="waitlist"
-      className="flex flex-col gap-8 px-6 py-20 sm:px-12 bg-[#f4f5ff]"
+      className="flex flex-col gap-8 px-6 py-20 sm:px-12 bg-[#f4f5ff] scroll-mt-24 sm:scroll-mt-28"
     >
       <div className="max-w-lg mx-auto text-center">
         <div className="flex flex-col gap-4 mb-4">
