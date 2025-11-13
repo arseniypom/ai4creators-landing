@@ -101,18 +101,21 @@ export default async function Home({
         />
 
         <FaqSection
-          title={faq.title}
-          description={faq.description}
+          leftTitleStart={contact.titleStart}
+          leftTitleEmphasis={contact.titleEmphasis}
+          leftTitleEnd={contact.titleEnd}
+          leftDescription={contact.description}
+          ctaLabel={contact.cta}
           items={faq.items}
         />
 
-        <ContactSection
+        {/* <ContactSection
           titleStart={contact.titleStart}
           titleEmphasis={contact.titleEmphasis}
           titleEnd={contact.titleEnd}
           description={contact.description}
           ctaLabel={contact.cta}
-        />
+        /> */}
       </main>
     </div>
   );
