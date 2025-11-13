@@ -7,6 +7,7 @@ type WaitlistSectionProps = {
   description: string;
   rotatingWords: readonly string[];
   payNowLabel: string;
+  bonuses: readonly string[];
 };
 
 export function WaitlistSection({
@@ -14,6 +15,7 @@ export function WaitlistSection({
   description,
   rotatingWords,
   payNowLabel,
+  bonuses,
 }: WaitlistSectionProps) {
   const handlePayNow = useCallback(() => {
     window.open(
@@ -38,15 +40,19 @@ export function WaitlistSection({
               {title}
             </h2>
           </div>
-          <p className="text-base text-zinc-600">{description}</p>
-          <ul className="mx-auto w-fit list-disc text-left text-zinc-700 marker:text-zinc-400">
-            <li>In-depth profile report</li>
-            <li>Content strategy</li>
-            <li>10 viral reels scripts</li>
-            <li>1mo Pro access when we launch</li>
+          <p className="text-base text-zinc-800 font-medium">{description}</p>
+          <ul className="mx-auto w-fit flex flex-wrap items-center justify-center text-left text-zinc-700">
+            {bonuses.map((item, index) => (
+              <li
+                key={`${item}-${index}`}
+                className="flex items-center before:mx-2 before:text-zinc-400 before:content-['•'] first:before:content-['']"
+              >
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
-        <div className="flex justify-center my-5">
+        <div className="flex justify-center mt-10 mb-5">
           <button
             type="button"
             onClick={handlePayNow}

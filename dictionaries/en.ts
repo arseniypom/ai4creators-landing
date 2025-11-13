@@ -2,7 +2,7 @@ import type { Dictionary } from "./types"
 
 const dictionary = {
   cta: {
-    pay_now: "I'm ready",
+    pay_now: "Join and get bonuses",
   },
   dialog: {
     title: "Enter your email",
@@ -192,6 +192,14 @@ const dictionary = {
       },
     ],
   },
+  contact: {
+    titleStart: "Help us make InstaGrow better for ",
+    titleEmphasis: "you",
+    titleEnd: "",
+    description:
+      "Tell us what feature, content, or tool you'd love to see inside InstaGrow — and we'll send you a small thank-you gift 💌",
+    cta: "Contact us",
+  },
   waitlist: {
     title: "Join our Beta launch today",
     description:
@@ -201,6 +209,12 @@ const dictionary = {
     helper_text:
       "or leave your email and be the first to know when we launch",
     rotatingWords: ["views", "followers", "engagement", "sales"],
+    bonuses: [
+      "In-depth profile report",
+      "Content strategy",
+      "10 viral reels scripts",
+      "1mo Pro access when we launch",
+    ],
   },
   pricing: {
     title: "Pricing",

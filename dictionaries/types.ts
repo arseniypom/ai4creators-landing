@@ -87,6 +87,13 @@ export type Dictionary = {
       answer: string
     }[]
   }
+  contact: {
+    titleStart: string
+    titleEmphasis: string
+    titleEnd?: string
+    description: string
+    cta: string
+  }
   waitlist: {
     title: string
     description: string
@@ -94,6 +101,7 @@ export type Dictionary = {
     cta: string
     helper_text?: string
     rotatingWords: readonly string[]
+    bonuses: readonly string[]
   }
   pricing: {
     title: string

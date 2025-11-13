@@ -32,6 +32,7 @@ export default async function Home({
     waitlist,
     faq,
     cta,
+    contact,
   } = dictionary;
 
   return (
@@ -95,6 +96,7 @@ export default async function Home({
           title={waitlist.title}
           description={waitlist.description}
           rotatingWords={waitlist.rotatingWords}
+          bonuses={waitlist.bonuses}
           payNowLabel={cta.pay_now}
         />
 
@@ -104,7 +106,13 @@ export default async function Home({
           items={faq.items}
         />
 
-        <ContactSection />
+        <ContactSection
+          titleStart={contact.titleStart}
+          titleEmphasis={contact.titleEmphasis}
+          titleEnd={contact.titleEnd}
+          description={contact.description}
+          ctaLabel={contact.cta}
+        />
       </main>
     </div>
   );
