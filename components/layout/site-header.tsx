@@ -43,7 +43,7 @@ export function SiteHeader({
   }
 
   return (
-    <header className="flex gap-4 border-b border-zinc-200 px-6 py-6 flex-row items-center justify-between sm:px-12">
+    <header className="sticky top-0 z-50 w-full flex gap-4 border-b border-zinc-200/60 bg-white/50 backdrop-blur px-6 py-6 flex-row items-center justify-between sm:px-12">
       <div className="flex items-center gap-2">
         <Image src="/logo.svg?v=2" alt={brand} width={30} height={30} priority />
         <span className="text-lg font-semibold sm:text-xl">{brand}</span>

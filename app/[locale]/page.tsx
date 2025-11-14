@@ -6,7 +6,6 @@ import {
   FaqSection,
   ScreenshotsSection,
   PricingSection,
-  ContactSection,
 } from '@/components/sections';
 import { SiteHeader } from '@/components/layout/site-header';
 import { resolveLocale } from '@/i18n-config';
@@ -36,8 +35,7 @@ export default async function Home({
   } = dictionary;
 
   return (
-    <div className="min-h-screen bg-zinc-50 py-10 text-zinc-900">
-      <main className="mx-auto flex w-full max-w-6xl flex-col overflow-hidden rounded-[2.5rem] border border-zinc-200 bg-white shadow-[0_40px_120px_-60px_rgba(15,23,42,0.3)]">
+    <main className="w-full">
         <SiteHeader
           brand={header.brand}
           ctaLabel={header.cta}
@@ -116,7 +114,6 @@ export default async function Home({
           description={contact.description}
           ctaLabel={contact.cta}
         /> */}
-      </main>
-    </div>
+    </main>
   );
 }

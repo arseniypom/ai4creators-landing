@@ -44,7 +44,7 @@ export function Hero({
 
   return (
     <section className="relative flex flex-col items-center gap-6 overflow-hidden px-6 py-20 text-center sm:px-12 sm:py-24 md:gap-8 md:py-28">
-      <div className="pointer-events-none absolute inset-0 -z-10 rounded-[2.5rem] bg-gradient-to-b from-[#f4f1ff] via-white to-white" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-[#f4f1ff] via-white to-white" />
       <span className="text-xs font-semibold uppercase tracking-[0.4em] text-zinc-500">
         {eyebrow}
       </span>
