@@ -45,7 +45,7 @@ export function ScreenshotsSection({
         <h2 className="text-3xl font-semibold text-zinc-900 sm:text-4xl">
           {title}
         </h2>
-        <p className="text-lg text-zinc-600 sm:text-xl">{description}</p>
+        {/* <p className="text-lg text-zinc-600 sm:text-xl">{description}</p> */}
       </div>
 
       <div className="relative mx-auto mt-12 max-w-5xl">

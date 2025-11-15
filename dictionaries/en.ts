@@ -46,9 +46,10 @@ const dictionary = {
     cta: "Get early access",
   },
   howItWorks: {
-    title: "How It Works",
+    // title: "How It Works",
+    title: "Full content system in 2 steps",
     description:
-      "Get a deep marketing research, and generate viral Reels scripts with 1 click",
+      "Get in-depth marketing research, then generate viral Reels scripts with 1 click",
     steps: [
       {
         title: "Marketing Strategy",
@@ -127,8 +128,8 @@ const dictionary = {
   valueProp: {
     title: "Why not just use ChatGPT?",
     description: [
-      "Because ChatGPT gives you text — not results.",
-      "Our model was trained on hundreds of proven content frameworks — the same strategies used in top marketing courses and viral creators’ playbooks.",
+      "Because ChatGPT gives you words — not results.",
+      "InstaGrow is built on hundreds of proven content frameworks — strategies used in top marketing courses and viral creators’ playbooks.",
       "So you don’t have to guess, prompt, or rewrite — it just works.",
     ],
     columns: {
@@ -171,24 +172,29 @@ const dictionary = {
     description: "Everything you need to know about InstaGrow before you join the waitlist.",
     items: [
       {
-        question: "How much does it cost to get started?",
+        question: "Does this work for my niche?",
         answer:
-          "Joining the waitlist is free. When InstaGrow launches, you'll get transparent pricing and a generous trial so you can explore the platform before upgrading.",
-      },
-      {
-        question: "Do I need technical skills to use InstaGrow?",
-        answer:
-          "Not at all. InstaGrow guides you through a simple onboarding flow and handles the heavy lifting. If you can answer a few questions about your brand, you can use InstaGrow.",
+          "Yes — it works for any niche. InstaGrow adapts to your industry, audience, tone, and goals. From fitness coaches to marketing experts and travel creators — it learns your space first, then generates content that fits",
       },
       {
         question: "What types of content can I create with InstaGrow?",
         answer:
-          "You can generate viral-ready Reels scripts, captions, and content plans tailored to your audience. We continuously expand formats to cover the trends that matter.",
+          "You can generate Reels scripts, posts, carousels ideas, and stories that follow top-performing formats — complete with hooks, storylines, and CTAs designed to get engagement or leads (your choice).",
       },
       {
-        question: "Can I customize the strategy to fit my brand voice?",
+        question: "How is this different from doing it manually?",
         answer:
-          "Yes. InstaGrow learns from your inputs and adapts tone, messaging, and creative angles so the strategy feels true to your brand.",
+          "Normally, you'd spend days researching, analyzing competitors, and planning posts. We automate all of that — and give you content that's already aligned with your niche and audience.",
+      },
+      {
+        question: "Can I edit the scripts?",
+        answer:
+          "Of course. You can tweak tone, length, or focus in seconds — or ask the AI to adjust it for you. It's your creative voice, just faster.",
+      },
+      {
+        question: "Will it really help me grow my Instagram?",
+        answer:
+          "Yes. Posting is only 30% of the game — the other 70% is strategy, story, and the right hooks that make your Reels blow up.",
       },
     ],
   },
@@ -202,8 +208,10 @@ const dictionary = {
   },
   waitlist: {
     title: "Join our Beta launch today",
+    // description:
+    //   "Pay $9 now and get your first Reels results in 24h + bonuses",
     description:
-      "Pay $9 now and get your first Reels results in 24h + bonuses",
+      "Pay $9 now and get your InstaGrow experience in 24h + bonuses!",
     emailPlaceholder: "Enter your email",
     cta: "Join beta",
     helper_text:
@@ -233,12 +241,15 @@ const dictionary = {
           "Content strategy",
           "10 viral reels scripts",
           "1mo Pro access when we launch",
+          "“Reels That Convert” mini-guide (PDF)",
+          "10 tested hooks from viral creators",
+          "Exclusive trending audios",
         ],
       },
       {
         name: "Personal",
         subtitle: "Perfect for solo-creators & experts",
-        price: 9,
+        price: 19,
         period: "/ month",
         label: "Available soon",
         benefits: [
@@ -251,7 +262,7 @@ const dictionary = {
       {
         name: "Pro",
         subtitle: "Perfect for SMMs & small teams",
-        price: 39,
+        price: 49,
         period: "/ month",
         label: "Available soon",
         highlight: true,

@@ -83,19 +83,43 @@ export function PricingSection({
                     {tier.period}
                   </span>
                 </div>
-                <ul className="mt-2 space-y-3">
-                  {tier.benefits.map((benefit, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center gap-3 text-sm text-zinc-600"
-                    >
-                      <span className="mt-[2px] grid h-6 w-6 flex-none place-items-center rounded-full border border-[#a7abff]/60 bg-[#f3f4ff] text-[#4338ca]">
-                        <Check className="h-4 w-4" />
-                      </span>
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
+                <ul className={cn("mt-2 space-y-3", idx === 0 && "ml-[calc(0.5rem+1px)]")}>
+                  {tier.benefits
+                    .slice(0, idx === 0 ? Math.max(0, tier.benefits.length - 3) : tier.benefits.length)
+                    .map((benefit, idxInner) => (
+                      <li
+                        key={idxInner}
+                        className="flex items-center gap-3 text-sm text-zinc-600"
+                      >
+                        <span className="mt-[2px] grid h-6 w-6 flex-none place-items-center rounded-full border border-[#a7abff]/60 bg-[#f3f4ff] text-[#4338ca]">
+                          <Check className="h-4 w-4" />
+                        </span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
                 </ul>
+                {idx === 0 && (
+                  <div className="relative group mt-3">
+                    <div className="pointer-events-none absolute -bottom-1 left-2 translate-y-full rounded-md bg-orange-500 px-2 py-1 text-[11px] font-medium text-white shadow-sm opacity-0 invisible transition-opacity duration-150 group-hover:visible group-hover:opacity-100">
+                      Bonuses
+                    </div>
+                    <div className="rounded-2xl border border-orange-200 bg-orange-50 p-2" title="Bonuses">
+                      <ul className="space-y-3">
+                        {tier.benefits.slice(-3).map((benefit, idxInner) => (
+                          <li
+                            key={idxInner}
+                            className="flex items-center gap-3 text-sm text-zinc-600"
+                          >
+                            <span className="mt-[2px] grid h-6 w-6 flex-none place-items-center rounded-full border border-[#fdba74]/60 bg-orange-50 text-orange-600">
+                              <Check className="h-4 w-4" />
+                            </span>
+                            <span>{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )}
               </div>
               {idx === 0 ? (
                 <div className="mt-auto pt-2 flex flex-col gap-1">
