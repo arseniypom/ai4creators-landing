@@ -1,6 +1,7 @@
 'use client';
 import { useCallback } from 'react';
 import { WordRotate } from '@/components/ui/word-rotate';
+import { cn } from '@/lib/utils';
 
 type WaitlistSectionProps = {
   title: string;
@@ -30,7 +31,7 @@ export function WaitlistSection({
       id="waitlist"
       className="flex flex-col gap-8 px-6 py-20 sm:px-12 bg-[#f4f5ff] scroll-mt-24 sm:scroll-mt-28"
     >
-      <div className="max-w-lg mx-auto text-center">
+      <div className="max-w-xl mx-auto text-center">
         <div className="flex flex-col gap-4 mb-4">
           <div className="flex items-center justify-center gap-3">
             <span aria-hidden="true" className="text-3xl sm:text-4xl">
@@ -41,15 +42,23 @@ export function WaitlistSection({
             </h2>
           </div>
           <p className="text-base text-zinc-800 font-medium">{description}</p>
-          <ul className="mx-auto w-fit flex flex-wrap items-center justify-center text-left text-zinc-700">
-            {bonuses.map((item, index) => (
-              <li
-                key={`${item}-${index}`}
-                className="flex items-center before:mx-2 before:text-zinc-400 before:content-['•'] first:before:content-['']"
-              >
-                {item}
-              </li>
-            ))}
+          <ul className="mx-auto w-fit flex flex-wrap items-center justify-center text-left">
+            {bonuses.map((item, index) => {
+              const isBonus = index >= bonuses.length - 3;
+              return (
+                <li
+                  key={`${item}-${index}`}
+                  className={cn(
+                    "flex items-center before:mx-2 before:content-['•'] first:before:content-['']",
+                    isBonus
+                      ? 'text-orange-500 before:text-zinc-400'
+                      : 'text-zinc-700 before:text-zinc-400'
+                  )}
+                >
+                  {item}
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="flex justify-center mt-10 mb-5">
