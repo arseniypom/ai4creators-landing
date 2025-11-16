@@ -84,7 +84,7 @@ const dictionary = {
   screenshots: {
     title: "See InstaGrow in Action",
     description:
-      "From creating a project to getting your strategy report — a quick peek at the product flow.",
+      "Sneak a peek at the strategy – this one’s made for a Fitness Coach 👇",
     items: [
       {
         title: "Project creation",

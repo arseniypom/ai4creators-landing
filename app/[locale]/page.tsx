@@ -4,7 +4,8 @@ import {
   WaitlistSection,
   HowItWorks,
   FaqSection,
-  ScreenshotsSection,
+  ScreenshotsV2Section,
+  ScreenshotsV3Section,
   PricingSection,
 } from '@/components/sections';
 import { SiteHeader } from '@/components/layout/site-header';
@@ -57,11 +58,18 @@ export default async function Home({
           steps={howItWorks.steps}
         />
 
-        <ScreenshotsSection
-          title={screenshots.title}
-          description={screenshots.description}
-          items={screenshots.items}
-        />
+        <div className="lg:hidden">
+          <ScreenshotsV2Section
+            title={screenshots.title}
+            description={screenshots.description}
+          />
+        </div>
+        <div className="hidden lg:block">
+          <ScreenshotsV3Section
+            title={screenshots.title}
+            description={screenshots.description}
+          />
+        </div>
 
         {/* TODO: Re-enable WhatWeDo section when refreshed content/design is ready */}
         {/*

@@ -44,6 +44,12 @@
 }
 
 :root {
+  /* InstaGrow brand palette (from DRAFT) */
+  --brand: #3A6FF8;
+  --brand-hover: #315FE0;
+  --brand-active: #2B55CC;
+  --accent: #FF7AC3;
+  --success: #10B981;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
