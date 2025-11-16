@@ -61,7 +61,7 @@ export function WaitlistSection({
             })}
           </ul>
         </div>
-        <div className="flex justify-center mt-10 mb-5">
+        <div className="flex justify-center mt-10">
           <button
             type="button"
             onClick={handlePayNow}
@@ -71,16 +71,16 @@ export function WaitlistSection({
           </button>
         </div>
         <div className="flex flex-col">
-          <div className="flex items-baseline gap-2 ml-[37%] md:ml-[43%]">
+          <div className="flex items-baseline gap-1 ml-[25%] md:ml-[35%]">
             <span
               aria-hidden="true"
-              className="text-xl font-medium text-zinc-700"
+              className="text-md font-medium text-zinc-700"
             >
               +
             </span>
             <WordRotate
               words={rotatingWords}
-              className="text-xl font-medium text-zinc-700"
+              className="text-md font-medium text-zinc-700"
               duration={2200}
             />
           </div>
