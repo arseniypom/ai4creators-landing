@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next"
+import Script from "next/script"
 import { Geist, Geist_Mono } from "next/font/google"
 
 import { i18n, resolveLocale } from "@/i18n-config"
@@ -76,6 +77,22 @@ export default async function LocaleLayout({
   return (
     <html lang={resolvedLocale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="65affb1c-3e1c-461a-bab4-e9561bf480c9"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17739393932"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-17739393932');`}
+        </Script>
         {children}
       </body>
     </html>
