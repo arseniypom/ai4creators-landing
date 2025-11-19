@@ -1,21 +1,9 @@
 import type { Metadata, Viewport } from "next"
-import Script from "next/script"
-import { Geist, Geist_Mono } from "next/font/google"
 
 import { i18n, resolveLocale } from "@/i18n-config"
 import { getDictionary } from "@/lib/get-dictionary"
 
-import "../globals.css"
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
+// Note: Global CSS, fonts, and scripts are provided by the root layout
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }))
@@ -66,35 +54,8 @@ export const viewport: Viewport = {
 
 export default async function LocaleLayout({
   children,
-  params,
 }: {
   children: React.ReactNode
-  params: Promise<{ locale: string }>
 }) {
-  const { locale } = await params
-  const resolvedLocale = resolveLocale(locale)
-
-  return (
-    <html lang={resolvedLocale}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="65affb1c-3e1c-461a-bab4-e9561bf480c9"
-          strategy="beforeInteractive"
-        />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17739393932"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-17739393932');`}
-        </Script>
-        {children}
-      </body>
-    </html>
-  )
+  return children
 }
