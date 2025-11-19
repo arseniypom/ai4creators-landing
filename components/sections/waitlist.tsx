@@ -19,6 +19,13 @@ export function WaitlistSection({
   bonuses,
 }: WaitlistSectionProps) {
   const handlePayNow = useCallback(() => {
+    // Fire Google Ads conversion event if available
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any).gtag_report_conversion?.()
+    } catch {
+      // no-op
+    }
     window.open(
       'https://getwaitlist.com/waitlist/31868',
       '_blank',

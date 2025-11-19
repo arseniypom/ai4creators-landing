@@ -32,6 +32,22 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'AW-17744776646');`}
         </Script>
+        <Script id="gtag-conversion" strategy="afterInteractive">
+          {`function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17744776646/KndCCM3Kl8MbEMabr41C',
+      'value': 1.0,
+      'currency': 'GBP',
+      'event_callback': callback
+  });
+  return false;
+}`}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
